@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+env/
+food_venv/
+ENV/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Database & SQLite
+*.sqlite3
+*.db
+
+# Logs
+*.log
+fix_inventory.log
+
+# Reports & Data Exports
+*.xlsx
+*.xls
+*.csv
+mr_verification_report.csv
+mr_verification_report.xlsx
+test_output.xlsx
+
+# OS & Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
