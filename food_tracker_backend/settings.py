@@ -130,8 +130,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/food_tracker/bills/'
-# Always use /app/bills inside the container for Docker volume mapping
-MEDIA_ROOT = '/app/bills'
+# Use /app/bills in Docker if present, otherwise default to local backend/media
+MEDIA_ROOT = os.environ.get('MEDIA_ROOT', '/app/bills' if os.path.exists('/app/bills') else os.path.join(BASE_DIR, 'media'))
 
 CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL', 'True').lower() in ('true', '1', 'yes')
 
